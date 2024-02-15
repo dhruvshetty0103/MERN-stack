@@ -1,87 +1,49 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>User Registration Form</title>
+    <title>User Registration Form</title>
 </head>
-
 <body>
-  <form>
-    <!-- Personal Information Section -->
-    <div>
-      <label>Enter full name</label>
-      <input>
-    </div>
-    <br>
-    <div>
-      <label>Your email</label>
-      <input type="email">
-    </div>
-    <br>
-    <div>
-      <label>Your dob</label>
-      <input type="date">
-    </div>
-
-    <!-- Country Selection -->
-    <br>
-    <label>Choose a country</label>
-    <input list="countries">
-    <datalist id="countries">
-      <option value="India">
-      <option value="USA">
-      <option value="Israel">
-      <option value="Russia">
-      <option value="Sri Lanka">
-      <option value="Bhtuan">
-      <option value="Norway">
-      <option value="Sweden">
-      <option value="Iceland">
-      <option value="Greenland">
-    </datalist>
-
-    <!-- Interests Section -->
-    <br>
-    <br>
-    <p>Interests
-    <p>
-
-      <!-- Add checkboxes for interests here -->
-      <label>Walking</label>
-      <input type="checkbox" />
-      <label>Running</label>
-      <input type="checkbox" />
-      <label>Swimming</label>
-      <input type="checkbox"/>
-      <label>Dancing</label>
-      <input type="checkbox"/>
-      <label>Shooting</label>
-      <input type="checkbox"/>
-      <!-- Password Fields -->
-      <br>
-      <br>
-      <label>Password</label>
-      <input type="password" name="password" id="password" value="" />
-      <br>
-      <br>
-      <label>Confirm Password</label>
-      <input type="password" name="confirmPassword" id="confirmPassword" value="" />
-
-      <!-- Terms and Conditions -->
-    <details>
-      <summary>
-        Terms and Conditions
-      </summary>
-      <p>Padhlo bhai</p>
-    </details>
-    <!-- Agreement Checkbox -->
-    <input required type="checkbox" name="agreed" id="agreed" />
-    <label>I agree to terms and conditions</label>
-    <!-- SubmitlButtol -->
-    <br>
-    <button type="submit">Submit</button>
-  </form>
-
+    <form>
+        <fieldset>
+            <legend>Personal Information:</legend>
+            Name: <input type="text" name="name" required><br>
+            Email: <input type="email" name="email" required><br>
+            Date of Birth: <input type="date" name="dob" required><br>
+        </fieldset>
+        <br>
+        Country: 
+        <select name="country" required>
+            <option value="">Select a country</option>
+            <option value="India">India</option>
+            <option value="us">USA</option>
+            <option value="rus">Russia</option>
+            <option value="australia">Australia</option>
+            <option value="bhutan">Bhutan</option>
+            <option value="france">France</option>
+            <option value="norway">Norway</option>
+            <option value="sweden">Sweden</option>
+            <option value="iceland">Iceland</option>
+            <option value="greenland">Greenland</option>
+        </select>
+        <br>
+        Interests:<br>
+        <input type="checkbox" name="walking" value="Walking"> Walking<br>
+        <input type="checkbox" name="running" value="Running"> Running<br>
+        <input type="checkbox" name="swimming" value="Swimming"> Swimming<br>
+        <input type="checkbox" name="dancing" value="Dancing"> Dancing<br>
+        <input type="checkbox" name="shooting" value="Shooting"> Shooting<br>
+        <br>
+        Password: <input type="password" name="password" required><br>
+        Confirm Password: <input type="password" name="confirm_password" required><br>
+        <details>
+            <summary>Terms and Conditions</summary>
+            <p>...Terms and Conditions content...</p>
+        </details>
+        <br>
+        <input type="checkbox" name="terms" required> I agree to the Terms and Conditions<br>
+        <input type="submit" value="Submit" disabled>
+    </form>
+  
 </body>
-
 </html>
